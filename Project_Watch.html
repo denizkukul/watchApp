@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Watch</title>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="Project_Watch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="tabs">
+            <span data-tab="time" id="time-tab" class="tab-btn unselectable">Time</span>
+            <span data-tab="chronometer" id="chronometer-tab" class="tab-btn unselectable">Chronometer</span>
+            <span data-tab="countdown" id="countdown-tab" class="tab-btn unselectable">Countdown</span>
+        </div>
+        <div id="time" class="tab">
+            <span id="timetxt" class="display"></span>
+            <div id="alert">
+                <p>Ding Ding Ding!</p>
+                <p id="alerttxt"></p>
+            </div>
+            <div id="alarm">
+                <div id="alarminput">
+                    <input id="hour" value="00" class="input" maxlength="2"><span class="unselectable">:</span><input
+                        id="minute" value="00" class="input" maxlength="2">
+                </div>
+                <span id="setalarm" class="button unselectable active">Set Alarm</span>
+            </div>
+            <div id="alarmlist" class="unselectable">Alarms</div>
+        </div>
+        <div id="chronometer" class="tab">
+            <span id="chronometertxt" class="display">00:00:00.000</span>
+            <div class="buttons">
+                <span id="btn1" class="button unselectable active">Start</span>
+                <span id="btn2" class="button unselectable active">Reset</span>
+            </div>
+        </div>
+        <div id="countdown" class="tab">
+            <div id="countdowninput" class="display">
+                <div class="labels" class="unselectable"><span class="label">Hours</span> <span>:</span> <span
+                        class="label">Minutes</span> <span>:</span> <span class="label">Seconds</span></div>
+                <div class="inputs"><input id="hours" value="00" class="input" maxlength="2"> <span
+                        class="unselectable">:</span> <input id="minutes" value="00" class="input" maxlength="2"> <span
+                        class="unselectable">:</span> <input id="seconds" value="00" class="input" maxlength="2"> </div>
+                <div id="countdowntxt"><span id="h" class="val"></span> <span class="column unselectable">:</span> <span
+                        id="min" class="val"></span> <span class="column">:</span> <span id="sec" class="val"></span>
+                </div>
+                <div id="countdownend" class="unselectable">TIME'S UP!</div>
+            </div>
+            <div class="buttons">
+                <span id="btn3" class="button unselectable active">Start</span>
+                <span id="btn4" class="button unselectable active">Reset</span>
+            </div>
+        </div>
+    </div>
+    <script src="Project_Watch.js"></script>
+</body>
+
+</html>
